@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Casa do Hambúrguer do Jacaré · Faça seu pedido pelo WhatsApp</title>
+<meta name="description" content="Hambúrguer artesanal no Jacaré, Rio de Janeiro. Peça direto pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1614;--ink2:#2a2320;--mus:#ffc21a;--red:#d62a1e;--cream:#fff4da;--cream2:#f8e7bd;--soft:#5e544c;--disp:'Anton',Impact,'Arial Narrow Bold','Arial Black',sans-serif;--sans:'Work Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+svg{display:block;max-width:100%}a{color:inherit}
+.wrap{width:min(1160px,100% - 48px);margin-inline:auto}
+.wm{position:fixed;inset:0;z-index:90;pointer-events:none;background-repeat:repeat;background-size:420px 260px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='260'%3E%3Cg transform='rotate(-24 210 130)' font-family='Arial,sans-serif' text-anchor='middle' fill='%23000' fill-opacity='.09'%3E%3Ctext x='210' y='125' font-size='34' font-weight='700' letter-spacing='6'%3EPR%C3%89VIA%3C/text%3E%3Ctext x='210' y='152' font-size='13' letter-spacing='3'%3EPROPOSTA DE SITE%3C/text%3E%3C/g%3E%3C/svg%3E")}
+.banner{background:var(--ink);color:#f5e9d0;font-size:13px;text-align:center;padding:9px 16px}
+.banner b{color:var(--mus)}
+header{position:sticky;top:0;z-index:50;background:var(--mus);border-bottom:3px solid var(--ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{text-decoration:none;font-family:var(--disp);font-size:1.45rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.brand small{display:block;font-family:var(--sans);font-weight:600;font-size:.62rem;letter-spacing:.2em;margin-top:4px}
+nav ul{display:flex;gap:30px;list-style:none;font-weight:600;font-size:.92rem}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:.98rem;text-transform:uppercase;letter-spacing:.05em;padding:16px 28px;border:3px solid var(--ink);border-radius:10px;box-shadow:5px 5px 0 var(--ink);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.btn svg{width:19px;height:19px;fill:currentColor;flex:none}
+.btn.alt{background:var(--mus);color:var(--ink)}
+.btn.sm{padding:11px 18px;font-size:.82rem;box-shadow:3px 3px 0 var(--ink)}
+.hero{background:var(--red);color:#fff;position:relative;overflow:hidden;padding:64px 0 90px;border-bottom:3px solid var(--ink)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 45%,rgba(255,194,26,.55),transparent 55%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:var(--ink);color:var(--mus);font-weight:700;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:24px}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.8rem,7.4vw,6.2rem);line-height:.98;text-transform:uppercase;letter-spacing:.005em}
+h1 span{color:var(--mus)}
+.lead{margin-top:24px;font-size:1.15rem;max-width:30em;color:#ffe7d8}
+.cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
+.pts{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:34px;font-weight:600;font-size:.92rem}
+.pts span::before{content:"✦ ";color:var(--mus)}
+.burger{position:relative;width:100%;max-width:440px;margin-inline:auto;animation:bob 5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-14px) rotate(2deg)}}
+.tick{background:var(--ink);color:var(--mus);overflow:hidden;white-space:nowrap;border-bottom:3px solid var(--ink)}
+.track{display:inline-flex;gap:0;animation:slide 26s linear infinite;padding:14px 0}
+.track span{font-family:var(--disp);font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase;padding:0 28px}
+.track span::after{content:"✦";margin-left:56px;color:var(--red)}
+@keyframes slide{to{transform:translateX(-50%)}}
+section{padding:90px 0}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.02;text-transform:uppercase}
+h2 span{color:var(--red)}
+.sub{margin-top:14px;color:var(--soft);max-width:36em}
+.sec-h{margin-bottom:44px}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.item{background:#fff;border:3px solid var(--ink);border-radius:16px;box-shadow:6px 6px 0 var(--ink);padding:26px 24px 24px;display:flex;flex-direction:column;transition:transform .25s}
+.item:hover{transform:translateY(-5px) rotate(-.5deg)}
+.item .k{font-weight:700;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.item h3{font-family:var(--disp);font-weight:400;font-size:1.7rem;text-transform:uppercase;line-height:1.05;margin:8px 0 8px}
+.item p{color:var(--soft);font-size:.96rem;flex:1;margin-bottom:18px}
+.item .btn{align-self:flex-start}
+.note{margin-top:26px;font-weight:500;font-size:.9rem;color:var(--soft)}
+.how{background:var(--mus);border-block:3px solid var(--ink)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:var(--cream);border:3px solid var(--ink);border-radius:16px;padding:28px 26px;position:relative}
+.step .n{font-family:var(--disp);font-size:3.4rem;line-height:1;color:var(--red)}
+.step h3{font-family:var(--disp);font-weight:400;font-size:1.5rem;text-transform:uppercase;margin:6px 0 6px}
+.step p{font-size:.97rem;color:var(--soft)}
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.w{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px;border:3px solid var(--ink);border-radius:16px;background:var(--cream2)}
+.w i{width:56px;height:56px;border-radius:14px;background:var(--red);border:3px solid var(--ink);display:grid;place-items:center;font-family:var(--disp);font-style:normal;color:#fff;font-size:1.5rem}
+.w h3{font-family:var(--disp);font-weight:400;font-size:1.35rem;text-transform:uppercase}
+.w p{color:var(--soft);font-size:.96rem}
+.final{background:var(--ink);color:#fff;padding:84px 0;text-align:center;position:relative;overflow:hidden}
+.final h2{color:#fff}.final h2 span{color:var(--mus)}
+.final p{margin:18px auto 30px;color:#e6d9c3;max-width:30em}
+.local{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 40px;margin-top:40px;color:#e6d9c3;font-size:.95rem}
+.local b{color:var(--mus);display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+footer{background:var(--ink);color:#b9ac98;font-size:.84rem;padding:0 0 110px}
+footer .row{border-top:1px solid rgba(255,255,255,.15);padding-top:24px}
+footer p{max-width:52em;margin-bottom:8px}footer .pf{color:var(--mus);font-weight:600}
+.fab{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25a35a;border:3px solid var(--ink);display:grid;place-items:center;box-shadow:4px 4px 0 var(--ink);transition:transform .2s}
+.fab:hover{transform:scale(1.07)}.fab svg{width:28px;height:28px;fill:#fff}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}.d1{transition-delay:.1s}.d2{transition-delay:.2s}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.burger,.track{animation:none}html{scroll-behavior:auto}}
+@media(max-width:900px){
+ nav ul{display:none}.hero{padding:44px 0 60px}.hero .wrap{grid-template-columns:1fr;gap:30px}.burger{max-width:300px}
+ section{padding:64px 0}.menu,.steps{grid-template-columns:1fr}.why{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ body{font-size:16.5px}.wrap{width:calc(100% - 36px)}.nav{height:64px}.nav .btn{padding:9px 13px;font-size:.74rem}
+ .brand{font-size:1.1rem}.brand small{display:none}.cta .btn{width:100%;justify-content:center}.banner{font-size:12px}
+ .w{grid-template-columns:48px 1fr}.w i{width:48px;height:48px}
+}
+</style>
+</head>
+<body>
+<div class="wm" aria-hidden="true"></div>
+<div class="banner"><b>PRÉVIA</b> · Proposta de site para Casa do Hambúrguer do Jacaré — versão de demonstração, não publicada</div>
+<header><div class="wrap nav">
+ <a class="brand" href="#topo">Casa do Hambúrguer<small>JACARÉ · RIO DE JANEIRO</small></a>
+ <nav><ul><li><a href="#cardapio">Cardápio</a></li><li><a href="#como">Como pedir</a></li><li><a href="#diferenciais">Diferenciais</a></li><li><a href="#contato">Contato</a></li></ul></nav>
+ <a class="btn sm" href="https://wa.me/5521969053811?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg> Pedir</a>
+</div></header>
+<main id="topo">
+<section class="hero" style="padding-bottom:90px">
+ <div class="wrap">
+  <div>
+   <span class="tag rv">Hambúrguer artesanal · Jacaré</span>
+   <h1 class="rv d1">Fome de <span>hambúrguer</span> de verdade?</h1>
+   <p class="lead rv d2">Monte seu pedido e fale direto com a gente pelo WhatsApp. Sem app, sem complicação.</p>
+   <div class="cta rv d2"><a class="btn alt" href="https://wa.me/5521969053811?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg> Fazer meu pedido</a><a class="btn" href="#cardapio">Ver cardápio</a></div>
+   <div class="pts rv d2"><span>Pedido direto</span><span>Jacaré e região</span><span>Atendimento rápido</span></div>
+  </div>
+  <div class="burger rv d1"><svg viewBox="0 0 400 400" aria-hidden="true"><ellipse cx="200" cy="372" rx="150" ry="14" fill="#000" opacity=".25"/><path d="M60 190C60 90 130 40 200 40s140 50 140 150z" fill="#e8962a"/><path d="M60 190C60 90 130 40 200 40s140 50 140 150z" fill="none" stroke="#b86d12" stroke-width="6"/><g fill="#fff4da"><ellipse cx="140" cy="100" rx="9" ry="5" transform="rotate(-20 140 100)"/><ellipse cx="205" cy="78" rx="9" ry="5"/><ellipse cx="262" cy="112" rx="9" ry="5" transform="rotate(25 262 112)"/><ellipse cx="180" cy="140" rx="9" ry="5" transform="rotate(10 180 140)"/><ellipse cx="240" cy="160" rx="9" ry="5" transform="rotate(-15 240 160)"/></g><path d="M56 188h288v14q-18 22-36 0t-36 0t-36 0t-36 0t-36 0t-36 0t-36 0t-36 0z" fill="#6aa33a"/><path d="M52 232h296l-24 34-50-18-50 18-50-18-50 18z" fill="#ffc21a"/><rect x="50" y="232" width="300" height="12" rx="6" fill="#ffc21a"/><rect x="48" y="244" width="304" height="44" rx="22" fill="#5a2c1b"/><path d="M60 290h280c0 0 6 44-46 54H106c-52-10-46-54-46-54z" fill="#e8962a"/><path d="M60 290h280" stroke="#b86d12" stroke-width="6"/><ellipse cx="150" cy="222" rx="42" ry="10" fill="#d62a1e"/><ellipse cx="256" cy="222" rx="42" ry="10" fill="#d62a1e"/></svg></div>
+ </div>
+</section>
+<div class="tick" aria-hidden="true"><div class="track"><span>Hambúrguer artesanal</span><span>Peça pelo WhatsApp</span><span>Jacaré · RJ</span><span>Sem complicação</span><span>Hambúrguer artesanal</span><span>Peça pelo WhatsApp</span><span>Jacaré · RJ</span><span>Sem complicação</span></div></div>
+
+<section id="cardapio">
+ <div class="wrap">
+  <div class="sec-h rv"><h2>O que tem <span>no cardápio</span></h2><p class="sub">Escolha a categoria e peça direto pelo WhatsApp. Os itens e valores são combinados no atendimento.</p></div>
+  <div class="menu">
+   <article class="item rv"><span class="k">Categoria</span><h3>Hambúrgueres</h3><p>Do clássico ao mais recheado, com pão, carne e acompanhamentos de sua escolha.</p><a class="btn sm" href="https://wa.me/5521969053811?text=Ol%C3%A1!%20Quero%20pedir%20um%20hamb%C3%BArguer." target="_blank" rel="noopener">Pedir</a></article>
+   <article class="item rv d1"><span class="k">Categoria</span><h3>Combos</h3><p>Hambúrguer com acompanhamento e bebida, para pedir de uma vez só.</p><a class="btn sm" href="https://wa.me/5521969053811?text=Ol%C3%A1!%20Quero%20pedir%20um%20combo." target="_blank" rel="noopener">Pedir</a></article>
+   <article class="item rv d2"><span class="k">Categoria</span><h3>Porções e bebidas</h3><p>Batata, acompanhamentos e bebidas geladas para completar o pedido.</p><a class="btn sm" href="https://wa.me/5521969053811?text=Ol%C3%A1!%20Quero%20pedir%20por%C3%A7%C3%B5es%20e%20bebidas." target="_blank" rel="noopener">Pedir</a></article>
+  </div>
+  <p class="note rv">Neste espaço entram os itens reais do cardápio, com fotos e descrição.</p>
+ </div>
+</section>
+
+<section class="how" id="como">
+ <div class="wrap">
+  <div class="sec-h rv"><h2>Pedir é <span style="color:var(--red)">rapidinho</span></h2></div>
+  <div class="steps">
+   <div class="step rv"><span class="n">1</span><h3>Chame no WhatsApp</h3><p>Toque no botão e já abre a conversa com a mensagem pronta.</p></div>
+   <div class="step rv d1"><span class="n">2</span><h3>Escolha seu pedido</h3><p>Conte o que quer comer e confirme endereço e forma de pagamento.</p></div>
+   <div class="step rv d2"><span class="n">3</span><h3>Receba quentinho</h3><p>É só aguardar. O combinado é combinado.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="diferenciais">
+ <div class="wrap">
+  <div class="sec-h rv"><h2>Por que pedir <span>direto</span></h2></div>
+  <div class="why">
+   <div class="w rv"><i>1</i><div><h3>Atendimento direto</h3><p>Você fala com quem faz o seu pedido, sem intermediários.</p></div></div>
+   <div class="w rv d1"><i>2</i><div><h3>Hambúrguer artesanal</h3><p>Feito com atenção, do pão ao ponto da carne.</p></div></div>
+   <div class="w rv"><i>3</i><div><h3>Do bairro para o bairro</h3><p>Atendimento no Jacaré e região, com agilidade.</p></div></div>
+   <div class="w rv d1"><i>4</i><div><h3>Pedido do seu jeito</h3><p>Conte o que prefere e a gente combina os detalhes.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="final" id="contato">
+ <div class="wrap">
+  <h2 class="rv">Bateu a fome? <span>Chama a gente!</span></h2>
+  <p class="rv d1">Faça seu pedido agora pelo WhatsApp.</p>
+  <a class="btn alt rv d2" href="https://wa.me/5521969053811?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg> Pedir no WhatsApp</a>
+  <div class="local rv d2"><span><b>Endereço</b>R. Guarani, 11 · Jacaré · Rio de Janeiro</span><span><b>WhatsApp</b>(21) 96905-3811</span><span><b>Horários</b>Consulte no WhatsApp</span></div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap"><div class="row">
+ <p class="pf">PRÉVIA · Proposta de site de demonstração. Cardápio, valores, horários, fotos e demais dados a confirmar com o estabelecimento.</p>
+ <p>Casa do Hambúrguer do Jacaré · Rio de Janeiro, RJ</p>
+</div></div></footer>
+<a class="fab" href="https://wa.me/5521969053811?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener" aria-label="Pedir pelo WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+<script>
+(function(){var els=[].slice.call(document.querySelectorAll('.rv'));
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+els.forEach(function(e){io.observe(e)});
+setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},4500);})();
+</script>
+</body>
+</html>
